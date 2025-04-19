@@ -1,0 +1,74 @@
+/* === reset.css === */
+/* Base from TailwindCSS Preflight (https://github.com/tailwindlabs/tailwindcss/blob/master/src/css/preflight.css) */
+
+/* 1. Set box-sizing to border-box for all elements */
+*, ::before, ::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb; /* default border color */
+}
+
+/* 2. Remove default margin */
+body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* 3. Set core body defaults */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: system-ui, sans-serif;
+  background-color: white;
+  color: black;
+}
+
+/* 4. Make images easier to work with */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 5. Inherit fonts for inputs and buttons */
+input, button, textarea, select {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+/* 6. Remove list styles */
+ul, ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* 7. Reset headings */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* 8. Prevent `sub` and `sup` elements from affecting line height */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+/* 9. Set default cursor and link color */
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* 10. Add smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}

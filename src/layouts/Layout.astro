@@ -1,0 +1,33 @@
+---
+import "../styles/global.css"
+import "../styles/fonts.css"
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="..." />
+    <meta name="keywords" content="..." />
+    <meta name="author" content="Henry Ge" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="常州海毅欧智能科技">
+    <meta property="og:description" content="...">
+    <meta property="og:image" content="/hiyio.svg">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="icon" type="image/webp" href="/hiyio.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body style="background-color: #f5f5f4;">
+    <slot />
+  </body>
+</html>

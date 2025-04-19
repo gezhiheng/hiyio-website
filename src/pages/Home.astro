@@ -1,0 +1,128 @@
+---
+// import Drawer from "../components/Drawer.astro";
+
+import IconAt from "../icons/at.astro";
+import IconArrow from "../icons/arrow.astro";
+---
+
+<main
+  id="content"
+  class="flex h-full min-h-screen flex-col items-center justify-center gap-6 lg:gap-12 drawer drawer-end"
+>
+  <div class="flex flex-col items-center justify-center gap-4">
+    <h1
+      class="hover-grad-text font-roboto-condensed my-0 uppercase font-semibold text-5xl lg:text-7rem lg:leading-8rem"
+    >
+      海毅欧智能科技
+    </h1>
+    <div
+      class="flex my-0 w-full items-center justify-center overflow-hidden gap-2"
+    >
+      <p
+        class="font-roboto-condensed text-grey my-0 font-medium lowercase text-2xl lg:text-2rem lg:leading-2rem"
+      >
+        我们专注于
+        <div class="group relative inline-block">
+          <div
+            class="transition-transform duration-100 group-hover:-translate-y-16"
+          >
+            <p
+              class="font-roboto-condensed text-grey my-0 font-medium lowercase text-2xl lg:text-2rem lg:leading-2rem"
+            >
+              机器人解决方案
+            </p>
+          </div>
+          <div
+            class="absolute inset-x-0 top-0 w-max translate-y-16 transition-transform duration-100 group-hover:translate-y-0"
+          >
+          <p
+            class="font-roboto-condensed my-0 font-medium lowercase text-2xl lg:text-[2rem] lg:leading-[2rem] bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-500"
+          >
+            机器人核心部件
+          </p>
+          </div>
+        </div>
+      </p>
+    </div>
+  </div>
+  <div class="grid w-full max-w-max grid-cols-2 gap-4 md:grid-cols-4">
+    <section
+      id="about"
+      aria-label="Company info"
+      class="group col-span-2 flex h-40 w-full rotate-0 sm:-rotate-2 flex-col rounded-3xl border-4 border-white bg-sky-50 sm:bg-stone-100 p-4 transition-all sm:hover:rotate-0 sm:hover:bg-sky-50 text-grey"
+    >
+      <div
+        class="flex lg:items-start gap-4 flex-row items-center text-center"
+      >
+        <div class="flex flex-col items-start">
+          <p
+            class="font-roboto-condensed my-0 font-semibold text-sky-600 sm:text-inherit sm:group-hover:text-sky-600"
+          >
+            常州海毅欧智能科技
+          </p>
+          <p
+            class="font-roboto-condensed my-0 font-medium sm:text-inherit sm:group-hover:text-sky-600"
+          >
+            电子 / 硬件开发
+          </p>
+        </div>
+      </div>
+      <p
+        class="font-roboto-condensed font-light text-sm max-w-72 text-sky-600 sm:text-inherit sm:group-hover:text-sky-600"
+      >
+        德国学界工业界人士联合创办的机器人初创公司。专注于机器人领域的创新。公司致力于通过不断的技术创新和产品优化，推动机器人核心部件的革新。
+      </p>
+    </section>
+    <div
+      class="group overflow-hidden ml-1.5 flex h-40 w-36 flex-col gap-1 rounded-3xl border-4 border-white sm:bg-stone-100 p-4 transition-all rotate-0 bg-yellow-50 sm:-rotate-2 sm:hover:rotate-0 sm:hover:bg-yellow-50 text-grey"
+    >
+      <img
+        class="aspect-square z-10 size-10 rounded-full transition-all grayscale-0 scale-110 sm:scale-100 sm:grayscale sm:group-hover:scale-110 sm:group-hover:grayscale-0"
+        src="/images/gmail.webp"
+        alt="email"
+      />
+      <p
+        class="font-roboto-condensed z-10 font-normal text-sm text-yellow-600 sm:text-inherit sm:group-hover:text-yellow-600"
+      >
+        想要了解更多吗
+      </p>
+      <IconAt />
+      <a
+        data-ccursor
+        class="inline-flex items-center z-100 gap-2 font-roboto-condensed px-2 py-2 text-yellow-600 sm:text-inherit sm:group-hover:text-yellow-600 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg shadow-lg backdrop-blur-sm hover:bg-opacity-30 transition-all duration-200 font-medium"
+        href="mailto:andriy.kuktenko@gmail.com"
+        data-umami-event="Mail me click"
+        id="mail"
+      >
+        联系我们
+        <span
+          class="w-2 h-2 rounded-full bg-green-400 duration-1000 animate-pulse"
+        ></span>
+      </a>
+    </div>
+    <div>
+      <label
+        for="experience-drawer"
+        class="group relative overflow-hidden py-4 px-0 flex h-40 w-36 flex-col gap-2 rounded-3xl border-4 border-white transition-all bg-blue-100 rotate-0 sm:-rotate-2 sm:hover:rotate-0 sm:bg-stone-100 sm:hover:bg-blue-100"
+        data-umami-event="Join Us Now"
+        id="experience"
+      >
+        <span
+          class="inline-flex gap-3 pl-5 items-center text-3xl font-roboto-condensed italic sm:not-italic sm:group-hover:italic text-pink-500 sm:text-zinc-300 sm:group-hover:text-pink-500 rounded-lg transition-all duration-100"
+        >
+          立即
+          <IconArrow />
+        </span>
+        <span
+          class="font-roboto-condensed pl-5 italic sm:not-italic sm:group-hover:italic text-3xl transition-all duration-100 text-pink-500 sm:text-zinc-300 sm:group-hover:text-pink-500"
+          >加入</span
+        >
+        <span
+          class="font-roboto-condensed pl-5 italic sm:not-italic sm:group-hover:italic text-3xl transition-all duration-100 text-pink-500 sm:text-zinc-300 sm:group-hover:text-pink-500"
+          >我们</span
+        >
+      </label>
+    </div>
+  </div>
+  <!-- <Drawer /> -->
+</main>

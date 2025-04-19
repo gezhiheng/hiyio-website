@@ -1,0 +1,63 @@
+@import './reset.css';
+
+html {
+  font-family: system-ui, sans-serif;
+  font-size: 1.125rem;
+}
+
+body {
+  font-weight: 500;
+}
+
+.hover-grad-text {
+  /* 相当于 @apply 的部分 */
+  font-size: 100px;
+  text-align: center;
+  color: transparent;
+  background-clip: text;
+  transition: all 0.7s ease-in-out;
+
+  /* 替换 theme()，使用自定义变量或 hex 值 */
+  background-image: linear-gradient(
+    to right,
+    #0f172a,         /* slate-950 */
+    #0f172a 33%,
+    var(--c-primary, #ff4d4f) 66%,
+    var(--c-primary, #ff4d4f),
+    var(--c-primary, #ff4d4f),
+    var(--c-primary, #ff4d4f),
+    var(--c-primary, #ff4d4f)
+  );
+  background-size: 300% 100%;
+  background-position: top left 100%;
+}
+
+/* UnoCSS 自动识别媒体查询和 hover */
+@media (min-width: 640px) {
+  .hover-grad-text {
+    background-position: top left;
+  }
+  .hover-grad-text:hover {
+    background-position: top left 100%;
+  }
+}
+
+/* 动画定义 */
+.animate-marker {
+  animation: marker 4s ease-out infinite;
+}
+
+@keyframes marker {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  35% {
+    transform: translate(-50%, -50%) scale(6);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(6);
+    opacity: 0;
+  }
+}
